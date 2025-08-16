@@ -123,3 +123,162 @@ print(nb.intersection(bn))  # Affiche les éléments communs aux deux ensembles
 print(nb.difference(bn))  # Affiche les éléments présents dans nb mais pas dans bn
 print(nb.issubset(bn))  # Vérifie si nb est un sous-ensemble de bn
 print(nb.issuperset(bn))  # Vérifie si nb est un sur-ensemble de bn 
+
+##les dictionnaires
+##un dictionnaire est une collection non ordonnee de paires clé-valeur.
+##son utilité est de stocker des données sous forme de paires clé-valeur, permettant un accès rapide aux valeurs via leurs clés.
+personne={"nom":"Saad","age":29,"ville":"Paris"}
+print(personne)
+print(personne["ville"])
+print(personne.values())    # Affiche toutes les valeurs du dictionnaire
+ETUDIANT={"nom":"Ali","age":23,"note":10}
+print(ETUDIANT)
+print(ETUDIANT["age"])
+ETUDIANT.update({"note":"20"})  # Ajoute une nouvelle clé "note" avec la valeur "20"    
+print(ETUDIANT)
+ETUDIANT["Ecole"]="Telecom Paris"
+print(ETUDIANT)
+
+##Leur utilité dans la vraie vie reel a chacun des cas
+##les listes servent servent quand on a besoin de garder une collection d'éléments ordonnée et modifiable.
+##exemple dans une entreprise,pour stocker les employés d'une équipe.
+
+##les dictionnaires servent quand on a besoin de stocker des données sous forme de paires clé-valeur.
+##exemple dans une application, pour stocker les informations d'un utilisateur (nom, âge, email).  
+
+##Resumé:
+##les listes sont des collections ordonnées et modifiables.
+##les tuples sont des collections ordonnées et non modifiables.
+##les ensembles sont des collections non ordonnées d'éléments uniques.
+##les dictionnaires sont des collections non ordonnées de paires clé-valeur.
+
+### les variables
+##une variable est un conteneur pour stocker des données.
+##elle a un nom et une valeur, et peut être modifiée au cours de l'exécution du programme.
+nom = "Alice"
+age = 30
+print(nom)
+print(age)
+## les affectation simple,multiple ,parallele
+## affectation simple
+x = 5
+## affectation multiple
+a, b, c = 1, 2, 3
+## affectation parallèle
+d = e = f = 4
+##singleton
+g = (1,) # Un tuple avec un seul élément
+print(g)
+
+id(g)  # Affiche l'identifiant de l'objet g
+print(type(g))  # Affiche le type de l'objet g
+id(x)  # Affiche l'identifiant de l'objet x
+
+###Les operateurs 
+##1.les operateurs arithmétiques
+##+,-,*,/,%,**
+##ils servent a faire des calculs numériques.
+##les operateurs de comparaison
+##==,!=,>,<,>=,<=
+##ils servent a comparer des valeurs.
+age=25
+print(age)
+
+
+##manipuler les chaines des caracteres
+##changer la casse
+chaine="Bonjour"
+print(chaine.lower())  # Convertit la chaîne en minuscules
+print(chaine.capitalize())  # Convertit la première lettre en majuscule
+
+###la fonction input
+##input sert a lire des entrées utilisateur depuis le clavier
+  # Affiche un message de bienvenue avec le nom saisi
+
+age=18
+print(f"mon age est {age} ans")
+taille=1.75
+print(f"ma taille est:{taille} m ")
+prenom="saad"
+nom="omar"
+nom_complet=prenom + " " + nom
+print(f"mon nom complet est {nom_complet}")
+age=18
+if age >= 18:
+    print("je suis majeur")
+else:
+    print("je suis mineur")
+
+print("fin") 
+
+Temperature=30
+
+if Temperature > 25:
+    print("il fait chaud")
+else:
+    print("il fait frais")
+print("Bienvenue dans le programme de bienvenue !")
+
+if False:
+    print("Bienvenue dans le programme de bienvenue !")
+else:
+    print("Accès refusé.")
+
+nombre=int(input("Entrez un nombre : "))
+if nombre>=0:
+    print("Le nombre est positif ou nul.")
+else:
+    print("Le nombre est négatif.")
+
+mot_de_passe=input("Entrez votre mot de passe : ")
+if mot_de_passe=="python123":
+    print("Accès autorisé.")
+else:
+    print("Accès refusé.")
+
+# Demande de l'âge
+age = int(input("Quel est votre âge ? "))
+
+if age < 18:
+    print("Trop jeune pour participer")
+else:
+    # Demande si l'utilisateur a une licence
+    licence = input("Avez-vous une licence (oui/non) ? ").strip().lower()
+
+    if licence != "oui":
+        print("Licence requise")
+    else:
+        # Demande du niveau
+        niveau = input("Quel est votre niveau (débutant/intermédiaire/avancé) ? ").strip().lower()
+
+        if niveau == "avancé":
+            print("Résultat : Accès complet")
+        elif niveau == "intermédiaire":
+            print("Résultat : Accès modéré")
+        elif niveau == "débutant":
+            print("Résultat : Accès restreint")
+        else:
+            print("Niveau inconnu")
+
+
+age = int(input("Quel est votre âge ? "))
+
+
+if age < 18:
+    print("Accès refusé.")
+else :
+    compte_actif=input("Votre compte est-il actif (oui/non) ? ").strip().lower()
+    if compte_actif != "oui":
+        print("Accès refusé.")
+    else:
+        niveau_d_abonnement = input("Quel est votre niveau d'abonnement (bronze/argent/or) ? ").strip().lower()
+        if niveau_d_abonnement == "bronze":
+            print("Accès limité.")
+        elif niveau_d_abonnement == "argent":
+            print("Accès standard.")
+        elif niveau_d_abonnement == "or":
+            print("Accès premium.")
+        else:
+            print("Niveau inconnu.")
+
+#Exercice : Demander à l'utilisateur son nom et son âge, puis afficher un message de bienvenue
