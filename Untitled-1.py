@@ -281,4 +281,59 @@ else :
         else:
             print("Niveau inconnu.")
 
+
+
+username=input("Entrez votre nom d'utilisateur : ")
+users=["admin", "user1", "user2"]
+if username in users:
+    print("Bienvenue, administrateur !")
+else:
+    print("error")
+
+
+###Sytéme de controle d'accès
+badge=input("tu as un badge (oui/non) ? ").strip().lower()
+if badge != "oui":
+    print("Accès refusé.")
+else:
+    statut=input("Quel est votre statut (employé/visiteur/administrateur) ? ").strip().lower()
+    if statut == "employé":
+        print("Accés limité")
+    elif statut == "administrateur":
+        print("Accés total !")
+    elif statut == "visiteur":
+        print("Accés restreint")
+
+nombre = int(input("Entrez un nombre : "))
+if nombre % 2 == 0:
+    print("Le nombre est pair.")
+else:
+    print("Le nombre est impair.")
+
+x=range(5)
+print(x)
+##les boucles en python sont des structures qui permet d'exécuter plusieurs fois un bloc d'instructions,tant qu'une condition est vrai
+#type des boucles
+##boucle for
+#sert a parcourir une sequence(liste,chaine de caracteres,range)
+X=range(5)
+for i in X:
+    print(i+1)
+
+
+notes=[10, 15, 12, 18, 14]
+compteur_notes = 0
+for i in notes:
+    if i >= 10:
+        print("Note supérieure ou égale à 10 :", i)
+    if i >= 15:
+        compteur_notes += 1
+    print("Note supérieure ou égale à 15 :", compteur_notes)
+
+Clients = ["Alice", "Bob", "Charlie"]
+factures = [100, 200, 150]
+
+for i in range(len(Clients)):
+    print(f"Client : {Clients[i]}, Facture : {factures[i]}")
+
 #Exercice : Demander à l'utilisateur son nom et son âge, puis afficher un message de bienvenue
