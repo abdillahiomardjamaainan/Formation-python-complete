@@ -6,3 +6,5 @@ b=20
 print(b)
 c=a+b
 print(c)
+d=10
+print(d)
